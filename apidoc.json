@@ -1,8 +1,8 @@
 {
-  "name": "Raw Template Service",
+  "name": "TM Network Analysis Service",
   "version": "1.0.0",
-  "description": "apiDoc for the Raw Template Service",
-  "title": "Raw Template Service API Documentation",
+  "description": "apiDoc for the TM Network Analysis Service",
+  "title": "TM Network Analysis Service API Documentation",
   "url": "http://127.0.0.1:30041/v1",
   "sampleUrl": "http://127.0.0.1:30042/v1"
 }

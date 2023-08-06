@@ -1,4 +1,4 @@
-# Raw Template
+# TM Network Analysis Serice
 
 > RESTful/gRPC api with Domain Driven Design
 
@@ -20,8 +20,8 @@
 1. [Docker](https://www.docker.com/products/docker-engine) Community Edition v17 or higher
 
 ```sh
-$ docker build -t raw-template  .
-$ docker run -p 30041:30041 -p 30042:30042 --env-file=.env  raw-template
+$ docker build -t tm-network-analysis-service  .
+$ docker run -p 30041:30041 -p 30042:30042 --env-file=.env  tm-network-analysis-service
 ```
 
 Access `http://localhost:<PORT>` and you're ready to go!

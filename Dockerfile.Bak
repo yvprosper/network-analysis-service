@@ -11,13 +11,13 @@
 # # @author [Ehichioya Prior Famous] <[famous@youverify.co]>
 # #
 
-FROM node:14.20.1-alpine as base
+FROM node:12.18.3-alpine as base
 
 FROM base as builder
 
 # deps for post-install scripts
 RUN apk add --update --no-cache \
-    python3 \
+    python \
     make \
     git \
     g++
@@ -47,6 +47,9 @@ ENV NODE_ENV=${NODE_ENV}
 
 RUN yarn build && yarn build:docs
 
-EXPOSE 30121 30122
+EXPOSE 30041 30042
+
+
 
 CMD [ "node", "dist/start.js" ]
+
