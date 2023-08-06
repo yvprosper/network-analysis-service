@@ -2,6 +2,7 @@ import { asValue } from "awilix";
 import GrpcServer from "interfaces/grpc/Server";
 import ElasticsearchQueryManager from "infra/libs/ElasticsearchQueryManager";
 import redisManager from "infra/database/redisManager";
+import neo4jManager from "infra/database/neo4jManager";
 import container from "src/container";
 
 class Application {
@@ -43,6 +44,13 @@ class Application {
 
       container.register({
         cache: asValue(redisClient),
+      });
+    }
+    if (neo4jManager) {
+      const driver = await neo4jManager({ config: this.config, logger: this.logger });
+
+      container.register({
+        neo4jDriver: asValue(driver),
       });
     }
     await this.restServer.start();

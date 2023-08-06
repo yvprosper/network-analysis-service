@@ -1,6 +1,7 @@
 import { VerifyTokenRequest, GetManyUsersRequest } from "stubs/user/messages_pb";
 import { PublishEventRequest, DeviceInfo } from "stubs/auditlog/messages_pb";
 import { QueueEmailRequest, Attachment, QueueSmsRequest } from "stubs/notification/messages_pb";
+import { GetActorByIdRequest } from "stubs/tm_actors/messages_pb";
 
 // VerifyToken
 export const createVerifyTokenRequest = (data) => {
@@ -78,4 +79,11 @@ export const createQueueSmsRequest = (data) => {
   queueSmsRequest.setMessage(data.message);
   queueSmsRequest.setPhoneNumber(data.phoneNumber);
   return queueSmsRequest;
+};
+
+export const createGetActorByIdRequest = (data) => {
+  const actorById = new GetActorByIdRequest();
+  actorById.setActorId(data.actorId);
+  actorById.setBusinessId(data.actorId);
+  return actorById;
 };

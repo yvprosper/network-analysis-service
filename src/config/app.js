@@ -55,6 +55,13 @@ const config = {
     env: "USER_SERVICE_GRPC_HOSTPORT",
     sensitive: true,
   },
+  actorServiceGrpcHostPort: {
+    doc: "Actor service grpc hostport",
+    format: "*",
+    default: null,
+    env: "ACTOR_SERVICE_GRPC_HOSTPORT",
+    sensitive: true,
+  },
   auditLogGrpcHostPort: {
     doc: "AuditLog service grpc hostport",
     format: "*",
